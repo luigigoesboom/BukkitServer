@@ -199,7 +199,7 @@ kill-mobs:
 #  - Zombie hasName <- This entity will be filtered if it HAS a name
    - ARMOR_STAND
    - Horse
-
+   - Zombie
 #This nerfs mob-spawners (Natural and player-made)
 #-------------------------------------------------
 #This goes by chunks rather then spawners. This is to prevent
@@ -211,7 +211,7 @@ kill-mobs:
 # --  the mobs spawned by the mobspawner upon chunk unload (Highly Recommended)
 mobspawner:
   enabled: false
-  max-spawn: 4
+  max-spawn: 10
   remove-mobs-on-chunk-unload: true
 
 #Dont use if you have CB++ or Spigot!
@@ -234,17 +234,17 @@ auto-removal:
   enabled: true
   broadcast-message: '&6[ClearLag] &aRemoved +RemoveAmount Entities!'
   broadcast-removal: true
-  autoremoval-interval: 460
+  autoremoval-interval: 700
   world-filter:
   # - this_world <-This world will be ignored during removal!
-  boat: true
+  boat: false
   falling-block: true
-  experience-orb: true
+  experience-orb: false
   painting: false
   projectile: true
   item: true
   itemframe: false
-  minecart: true
+  minecart: false
   primed-tnt: true
   item-filter:
   # - 264
